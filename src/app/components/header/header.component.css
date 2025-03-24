@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Bytesized&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inconsolata", monospace;
+    background-color: #030712;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(3, 7, 18, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logo .primary {
+    color: #6b27d9;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+    color: #6b27d9;
+}
+
+ul>li>button {
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.signin {
+    border: 1px solid white;
+    background: transparent;
+    width: 120px;
+}
+
+.signin:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.getstarted {
+    border: none;
+    width: 140px;
+    background-color: #6d28d9;
+}
+
+.getstarted:hover {
+    background-color: #5a21b5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 2%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 10px;
+    }
+
+    ul>li>button {
+        width: 100%;
+        text-align: center;
+    }
+}

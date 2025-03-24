@@ -1,1 +1,19 @@
-<p>header works!</p>
+<header>
+    <div class="logo" routerLink="/">
+        Intelli<span class="primary">Mock</span>
+    </div>
+    <nav>
+        @if (isLogin()) {
+            <ul>
+                <li routerLink="/">Home</li>
+                <li routerLink="/questions">Questions'</li>
+                <li routerLink="/interviews">Interviews'</li>
+            </ul>
+        } @else {
+            <ul>
+                <li><button class="signin" routerLink="/login">Log In</button></li>
+                <li><button class="getstarted">Get Started</button></li>
+            </ul>
+        }
+    </nav>
+</header>
