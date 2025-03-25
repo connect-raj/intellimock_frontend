@@ -1,0 +1,14 @@
+<div class="main-container">
+    <div class="login">
+        <div class="form-title">{{ loginSignal() }}</div>
+        <form action="">
+            <input type="email" id="email" name="email" required placeholder="E-Mail...">
+            <input type="password" id="password" name="password" required placeholder="Password...">
+            @if (loginSignal() === "Sign up") {
+                <input type="password" id="password" name="password" required placeholder="Confirm Password...">
+                <input type="text" name="fullName" id="fullName" required placeholder="Full Name">
+            }
+            <button type="submit">{{ loginSignal() }} </button>  
+        </form>
+    </div>
+</div>
