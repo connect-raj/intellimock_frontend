@@ -58,6 +58,9 @@ app-card:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    section{
+        height: auto;
+    }
     .title-wrapper {
         font-size: 1.8rem;
     }

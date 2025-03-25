@@ -1,0 +1,84 @@
+/* Base Styles */
+section.ai-demo {
+    background-color: #0b111e;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    text-align: center;
+}
+
+/* Title Wrapper */
+section.ai-demo .title-wrapper {
+    max-width: 800px;
+    width: 100%;
+}
+
+section.ai-demo .title-wrapper h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+section.ai-demo .title-wrapper .sub-title {
+    color: #9ca3af;
+    font-size: 1.2rem;
+    max-width: 600px;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+/* Card Wrapper */
+section.ai-demo .card-wrapper {
+    display: flex;
+    justify-content: space-around   ;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    section.ai-demo {
+        padding: 3rem 1.5rem;
+    }
+
+    section.ai-demo .title-wrapper h1 {
+        font-size: 2rem;
+    }
+
+    section.ai-demo .title-wrapper .sub-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section.ai-demo {
+        padding: 2.5rem 1rem;
+    }
+
+    section.ai-demo .title-wrapper h1 {
+        font-size: 1.8rem;
+    }
+
+    section.ai-demo .card-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    section.ai-demo {
+        padding: 2rem 0.5rem;
+    }
+
+    section.ai-demo .title-wrapper h1 {
+        font-size: 1.6rem;
+    }
+
+    section.ai-demo .title-wrapper .sub-title {
+        font-size: 0.95rem;
+    }
+}

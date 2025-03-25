@@ -88,14 +88,6 @@
     background: #060b1c;
     transform: scale(1.05);
   }
-  
-  /* 🏆 Trusted Companies */
-  .trust-text {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: #b3b3b3;
-  }
-  
   /* 🛠 AI Interview Floating Card */
   .interview-card {
     position: relative;

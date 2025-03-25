@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Bytesized&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
 
 * {
@@ -12,7 +11,7 @@
 
 header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -36,22 +35,26 @@ header {
     color: #6b27d9;
 }
 
-nav ul {
+nav {
+    display: flex;
+}
+
+.nav-links {
     list-style: none;
     display: flex;
     gap: 2rem;
 }
 
-nav ul li {
+.nav-links li {
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
-nav ul li:hover {
+.nav-links li:hover {
     color: #6b27d9;
 }
 
-ul>li>button {
+button {
     padding: 12px 18px;
     border-radius: 8px;
     cursor: pointer;
@@ -81,21 +84,44 @@ ul>li>button {
 }
 
 /* Responsive Design */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem 2%;
+    .menu-toggle {
+        display: block;
     }
 
-    nav ul {
+    nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(3, 7, 18, 0.9);
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-links {
         flex-direction: column;
         gap: 1rem;
-        margin-top: 10px;
     }
 
-    ul>li>button {
+    .nav-links li {
+        padding: 10px;
         width: 100%;
-        text-align: center;
+    }
+
+    nav.active {
+        display: flex;
     }
 }
