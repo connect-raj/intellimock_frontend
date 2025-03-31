@@ -1,1 +1,42 @@
-<p>question-component works!</p>
+<app-header></app-header>
+<div class="questions-container">
+    <div class="question-content">
+        <h1>Select a <span>Language</span></h1>
+        
+        <!-- Language Selection Buttons -->
+        <div class="language-buttons">
+            <button *ngFor="let lang of ['JavaScript', 'Python', 'Java']"
+                    (click)="changeLanguage(lang)"
+                    [class.selected]="selectedLanguage === lang">
+                {{ lang }}
+            </button>
+        </div>
+
+        <!-- Check if questions exist before displaying -->
+        <div *ngIf="questions[selectedLanguage]">
+            <div class="question-sections">
+                <!-- Mock Questions Section -->
+                <div class="question-section">
+                    <h2>Mock Questions</h2>
+                    <div class="question-cards">
+                        <div *ngFor="let q of questions[selectedLanguage]?.mock" class="question-card">
+                            <h3>{{ q.question }}</h3>
+                            <p>{{ q.answer }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coding Questions Section -->
+                <div class="question-section">
+                    <h2>Coding Questions</h2>
+                    <div class="question-cards">
+                        <div *ngFor="let q of questions[selectedLanguage]?.coding" class="question-card">
+                            <h3>{{ q.question }}</h3>
+                            <p>{{ q.answer }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
