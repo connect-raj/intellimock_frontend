@@ -13,28 +13,28 @@ export const routes: Routes = [{
     loadComponent: () => import('./components/interview-section/interview-section.component').then(i => i.InterviewSectionComponent)           
 },{
     path:"login",
-    loadComponent: () => import('./components/login/login.component').then(lo => lo.LoginComponent),
+    loadComponent: () => import('./components/home/auth/login/login.component').then(lo => lo.LoginComponent),
     data: {
         'formType':'Login'
     }
 },{
     path:"register",
-    loadComponent: () => import('./components/login/login.component').then(si => si.LoginComponent),
+    loadComponent: () => import('./components/home/auth/login/login.component').then(si => si.LoginComponent),
     data: {
         'formType':'Register'
     }
 },
 {
     path: "interviews/Mock-Interview",
-    loadComponent: () => import('./components/mock-interview/mock-interview.component').then(mi => mi.MockInterviewComponent)
+    loadComponent: () => import('./components/mock/mock-interview/mock-interview.component').then(mi => mi.MockInterviewComponent)
 },{
     path: "interviews/Coding-Interview",
-    loadComponent: () => import('./components/code-interview/code-interview.component').then(ci => ci.CodeInterviewComponent)
+    loadComponent: () => import('./components/code/code-interview/code-interview.component').then(ci => ci.CodeInterviewComponent)
 },{
     path: "interviews/Mock-Interview/:id",
-    loadComponent: () => import('./components/mock-interview-page/mock-interview-page.component').then(mip => mip.MockInterviewPageComponent)
+    loadComponent: () => import('./components/mock/mock-interview-page/mock-interview-page.component').then(mip => mip.MockInterviewPageComponent)
 },{
     path: "interviews/Coding-Interview/:id",
-    loadComponent: () => import('./components/mock-interview-page/mock-interview-page.component').then(mip => mip.MockInterviewPageComponent)
+    loadComponent: () => import('./components/mock/mock-interview-page/mock-interview-page.component').then(mip => mip.MockInterviewPageComponent)
 }
 ];

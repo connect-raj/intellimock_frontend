@@ -1,24 +1,31 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { v4 as uuid } from 'uuid';
-import { HeaderComponent } from '../header/header.component';
+import { HeaderComponent } from '../../common/header/header.component';
 
 @Component({
-  selector: 'app-code-interview',
+  selector: 'app-mock-interview',
+  standalone: true,
   imports: [ReactiveFormsModule, CommonModule, RouterLink, HeaderComponent],
-  templateUrl: './code-interview.component.html',
-  styleUrl: './code-interview.component.css',
+  templateUrl: './mock-interview.component.html',
+  styleUrl: './mock-interview.component.css',
 })
-export class CodeInterviewComponent {
+export class MockInterviewComponent {
   disabledField = true;
   intId = uuid();
   interviewData: FormGroup = new FormGroup({
+    interviewType: new FormControl(''),
     language: new FormControl(''),
     experience: new FormControl(''),
     level: new FormControl(''),
   });
+
+  // Getter for checking if interview type is selected
+  get isMockTypeSelected(): boolean {
+    return this.interviewData.get('interviewType')?.value === 'mock';
+  }
 
   //Form Submission Handling method
   onSubmit() {

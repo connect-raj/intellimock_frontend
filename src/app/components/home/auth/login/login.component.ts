@@ -7,9 +7,11 @@ import {
   FormControl,
   Validators,
 } from '@angular/forms';
-import { HeaderComponent } from '../header/header.component';
+import { HeaderComponent } from '../../../common/header/header.component';
 import { CommonModule } from '@angular/common';
 import { merge } from 'rxjs';
+import { LoginService } from '../../../../services/auth/login.service';
+import { userObjLogin } from '../../../../constants/types';
 
 @Component({
   selector: 'app-login',
@@ -43,7 +45,7 @@ export class LoginComponent implements OnInit {
   ]);
   readonly userName = new FormControl('', [Validators.required]);
   userDataForm: FormGroup;
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private userLogin:LoginService) {
     this.userDataForm = new FormGroup({
       userEmail: this.userEmail,
       userPassword: this.userPassword,
@@ -69,13 +71,21 @@ export class LoginComponent implements OnInit {
       );
     }
 
+    //initilizing validators
     this.validatorEmail();
     this.validatorPassword();
   }
 
   formHandler() {
     if (this.userDataForm.valid) {
-      console.log(this.userDataForm.value);
+      const data:userObjLogin = {
+        userEmail: this.userDataForm.get('userEmail')?.value,
+        userPassword: this.userDataForm.get('userPassword')?.value,
+      }
+
+      this.userLogin.userLogin(data).subscribe((res) => {
+        console.log(res);
+      })
     } else {
       console.log('Form is invalid');
     }
