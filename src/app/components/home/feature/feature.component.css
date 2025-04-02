@@ -2,7 +2,7 @@ section{
     height: auto;
     background-color: #121926;
 }
-/* Features Section */
+
 .features {
     display: flex;
     flex-direction: column;
@@ -34,7 +34,6 @@ section{
     color: #b0b0b0;
 }
 
-/* Grid Layout */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -43,7 +42,6 @@ section{
     margin: 0 auto;
 }
 
-/* Feature Card */
 app-card {
     display: block;
     background: #030712;
@@ -56,7 +54,6 @@ app-card:hover {
     transform: translateY(-5px);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     section{
         height: auto;

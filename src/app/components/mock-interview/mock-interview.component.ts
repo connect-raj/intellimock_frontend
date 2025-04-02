@@ -3,17 +3,18 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { v4 as uuid } from 'uuid';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-mock-interview',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, RouterLink],
+  imports: [ReactiveFormsModule, CommonModule, RouterLink, HeaderComponent],
   templateUrl: './mock-interview.component.html',
-  styleUrl: './mock-interview.component.css'
+  styleUrl: './mock-interview.component.css',
 })
 export class MockInterviewComponent {
-  disabledField = true
-  intId = uuid(); 
+  disabledField = true;
+  intId = uuid();
   interviewData: FormGroup = new FormGroup({
     interviewType: new FormControl(''),
     language: new FormControl(''),
@@ -25,7 +26,7 @@ export class MockInterviewComponent {
   get isMockTypeSelected(): boolean {
     return this.interviewData.get('interviewType')?.value === 'mock';
   }
-  
+
   //Form Submission Handling method
   onSubmit() {
     if (this.interviewData.valid) {
@@ -36,8 +37,8 @@ export class MockInterviewComponent {
     }
   }
 
-  ngOnInit(){
-    this.interviewData.get('experience')?.valueChanges.subscribe(value => {
+  ngOnInit() {
+    this.interviewData.get('experience')?.valueChanges.subscribe((value) => {
       let level = '';
       if (value === '0-1') {
         level = 'junior';

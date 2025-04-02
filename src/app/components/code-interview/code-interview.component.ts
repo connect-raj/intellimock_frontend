@@ -3,16 +3,17 @@ import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { v4 as uuid } from 'uuid';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-code-interview',
-  imports: [ReactiveFormsModule, CommonModule, RouterLink],
+  imports: [ReactiveFormsModule, CommonModule, RouterLink, HeaderComponent],
   templateUrl: './code-interview.component.html',
-  styleUrl: './code-interview.component.css'
+  styleUrl: './code-interview.component.css',
 })
 export class CodeInterviewComponent {
-  disabledField = true
-  intId = uuid(); 
+  disabledField = true;
+  intId = uuid();
   interviewData: FormGroup = new FormGroup({
     language: new FormControl(''),
     experience: new FormControl(''),
@@ -29,8 +30,8 @@ export class CodeInterviewComponent {
     }
   }
 
-  ngOnInit(){
-    this.interviewData.get('experience')?.valueChanges.subscribe(value => {
+  ngOnInit() {
+    this.interviewData.get('experience')?.valueChanges.subscribe((value) => {
       let level = '';
       if (value === '0-1') {
         level = 'junior';

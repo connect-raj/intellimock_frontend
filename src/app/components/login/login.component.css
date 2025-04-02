@@ -1,4 +1,3 @@
-/* Background with Gradient and Polka Dot Animation */
 .main-container {
     height: 100vh;
     display: flex;
@@ -9,7 +8,6 @@
     position: relative;
 }
 
-/* Polka Dot Animation */
 .main-container::before {
     content: "";
     position: absolute;
@@ -29,7 +27,6 @@
     }
 }
 
-/* Login Box */
 .login {
     width: 100%;
     max-width: 480px;
@@ -43,7 +40,6 @@
     z-index: 2;
 }
 
-/* Title */
 .login .form-title {
     font-size: 2.5rem;
     font-weight: bold;
@@ -51,14 +47,13 @@
     color: #ffffff;
 }
 
-/* Form Inputs */
 .login form {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
 
-.login form input {
+.login form .input {
     width: 100%;
     padding: 0.9rem;
     border-radius: 10px;
@@ -69,13 +64,16 @@
     transition: 0.3s ease;
 }
 
+.emailError{
+    color: red;
+}
+
 .login form input:focus {
     border-color: #6d28d9;
     outline: none;
     box-shadow: 0 0 10px rgba(109, 40, 217, 0.6);
 }
 
-/* Button */
 .login form button {
     width: 100%;
     padding: 1rem;
@@ -92,8 +90,14 @@
 .login form button:hover {
     background: #5b21b6;
 }
-
-/* Responsive Design */
+.option-text div{
+    margin: 1.5rem 0 0 0;
+    font-size: 1.3rem;
+}
+.option-text div span{
+    color: #6d28d9;
+    cursor: pointer;
+}
 @media (max-width: 768px) {
     .login {
         max-width: 90%;

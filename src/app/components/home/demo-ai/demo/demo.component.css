@@ -1,14 +1,13 @@
-/* Base Styles */
 .ai-interview-container {
   background: #111;
   color: #fff;
   border-radius: 16px;
   text-align: left;
-  width: 90%; /* ✅ Dynamic width */
-  max-width: 700px; /* ✅ Prevents it from overflowing */
+  width: 90%;
+  max-width: 700px; 
   font-family: Arial, sans-serif;
   overflow: hidden;
-  margin: 20px auto; /* ✅ Centers the container */
+  margin: 20px auto; 
 }
 
 /* Interview Header */
@@ -21,15 +20,14 @@
   border-bottom: 1px solid #333;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
-  flex-wrap: wrap; /* ✅ Ensures responsiveness */
+  flex-wrap: wrap; 
 }
 
 .interview-header .interviewer-info .title, 
 .interview-header .interviewer-info .sub-title {
-  font-size: 0.85rem; /* ✅ Better readability */
+  font-size: 0.85rem; 
 }
 
-/* Interviewer Info */
 .interviewer-info {
   display: flex;
   align-items: center;
@@ -50,11 +48,10 @@
   flex-shrink: 0;
 }
 
-/* Actions */
 .actions {
   display: flex;
   gap: 1.2rem;
-  flex-wrap: wrap; /* ✅ Prevents overflow */
+  flex-wrap: wrap;
   margin-top: 10px;
 }
 
@@ -73,7 +70,6 @@
   background-color: #1f2937;
 }
 
-/* Interview Body */
 .interview-body {
   padding: 20px;
   background-color: #030712;
@@ -81,7 +77,6 @@
   border-bottom-right-radius: 16px;
 }
 
-/* Question Section */
 .question {
   display: flex;
   align-items: center;
@@ -97,7 +92,6 @@
   margin: 5px 0;
 }
 
-/* Answer Button */
 .answer-button {
   background: #6d28d9;
   color: white;
@@ -107,7 +101,7 @@
   cursor: pointer;
   width: 100%;
   max-width: 250px;
-  margin: 15px auto; /* ✅ Centered on small screens */
+  margin: 15px auto; 
   font-size: 16px;
   transition: 0.3s;
   display: block;
@@ -118,10 +112,9 @@
   background: #5b21b6;
 }
 
-/* 🟢 Responsive Design */
 @media (max-width: 768px) {
   .ai-interview-container {
-    width: 95%; /* ✅ Slightly wider for better fit */
+    width: 95%; 
   }
 
   .interview-header {
@@ -131,7 +124,7 @@
 
   .actions {
     justify-content: center;
-    flex-wrap: wrap; /* ✅ Ensures proper alignment */
+    flex-wrap: wrap;
   }
 
   .question {

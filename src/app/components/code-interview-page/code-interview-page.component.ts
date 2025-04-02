@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-code-interview-page',
-  imports: [],
+  imports: [HeaderComponent],
   templateUrl: './code-interview-page.component.html',
   styleUrl: './code-interview-page.component.css'
 })

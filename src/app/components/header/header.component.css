@@ -44,6 +44,9 @@ nav {
     display: flex;
     gap: 2rem;
 }
+.hidden{
+    display: none;
+}
 
 .nav-links li {
     cursor: pointer;
@@ -83,7 +86,6 @@ button {
     background-color: #5a21b5;
 }
 
-/* Responsive Design */
 .menu-toggle {
     display: none;
     background: none;
@@ -92,7 +94,6 @@ button {
     cursor: pointer;
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;

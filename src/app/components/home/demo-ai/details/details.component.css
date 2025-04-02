@@ -1,17 +1,15 @@
-/* Card Styles */
 .card {
     background: #030712;
     color: #fff;
     border-radius: 12px;
     padding: 20px;
-    width: 150%; /* ✅ Dynamic width */
-    max-width: 400px; /* ✅ Prevents it from being too wide */
+    width: 150%; 
+    max-width: 400px; 
     font-family: Arial, sans-serif;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin: 20px auto; /* ✅ Centers the card */
+    margin: 20px auto; 
 }
 
-/* Title & Subtitle */
 .title {
     font-size: 18px;
     font-weight: bold;
@@ -24,7 +22,6 @@
     margin-bottom: 15px;
 }
 
-/* Tabs */
 .tabs {
     display: flex;
     background: #1a1a26;
@@ -49,14 +46,12 @@
     color: #fff;
 }
 
-/* Info Section */
 .info {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-/* Info Item */
 .info-item {
     display: flex;
     align-items: center;
@@ -90,12 +85,11 @@
     color: #a1a1a1;
 }
 
-/* 🟢 Responsive Design */
 @media (max-width: 768px) {
     .card {
-        width: 100%; /* ✅ Slightly wider for better fit */
+        width: 100%; 
         max-width: 380px;
-        padding: 18px; /* ✅ Adjusted padding */
+        padding: 18px;
     }
 
     .tabs {
@@ -104,17 +98,17 @@
     }
 
     .tabs button {
-        font-size: 13px; /* ✅ Slightly smaller text */
+        font-size: 13px; 
         padding: 6px 0;
     }
 
     .info-item {
-        flex-direction: row; /* ✅ Ensures alignment */
+        flex-direction: row; 
         align-items: center;
     }
 
     .icon {
-        width: 32px; /* ✅ Slightly smaller icons */
+        width: 32px; 
         height: 32px;
         font-size: 14px;
     }
@@ -130,13 +124,13 @@
 
 @media (max-width: 480px) {
     .card {
-        width: 100%; /* ✅ Full width for smaller screens */
+        width: 100%; 
         max-width: 350px;
         padding: 15px;
     }
 
     .tabs {
-        flex-direction: column; /* ✅ Stacks tabs on small screens */
+        flex-direction: column; 
         padding: 3px;
     }
 

@@ -18,10 +18,10 @@ export const routes: Routes = [{
         'formType':'Login'
     }
 },{
-    path:"signup",
+    path:"register",
     loadComponent: () => import('./components/login/login.component').then(si => si.LoginComponent),
     data: {
-        'formType':'Sign up'
+        'formType':'Register'
     }
 },
 {

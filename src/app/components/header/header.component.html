@@ -7,8 +7,8 @@
     <i class="bi bi-list"></i>
   </button>
 
-    <nav [ngClass]="{'active': isMenuOpen}">
-    <ul class="nav-links">
+  <nav [ngClass]="{ active: isMenuOpen }">
+    <ul class="nav-links" [ngClass]="{hidden}">
       <ng-container *ngIf="isLogin(); else guestMenu">
         <li routerLink="/">Home</li>
         <li routerLink="/questions">Questions</li>
